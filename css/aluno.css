@@ -127,7 +127,6 @@ nav {
 @media (max-width: 999px) {
     .busca {
         width: 100%;
-        display: none;
     }
     .cards_turma {
         grid-template-columns: repeat(1, 1fr);
