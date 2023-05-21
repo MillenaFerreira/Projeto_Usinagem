@@ -133,7 +133,19 @@ nav {
     }
 }
 @media (max-width: 640px) {
-
+    .busca a{
+        font-size: 1rem;
+    }
+    .container_topo{
+        text-align: center;
+    }
+    .container {
+        padding: 5vw 20px;
+    }
+    .card{
+        width: 270px;
+        height: 270px;
+    }
 }
 
 
