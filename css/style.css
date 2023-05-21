@@ -4,30 +4,3 @@ body {
     display: grid;
     grid-template-rows: auto 75px 1fr;
 }
-
-.busca {
-    height: 100%;
-    width: 50%;
-    display: flex;
-    justify-content: space-around;
-    background-color: aqua;
-}
-
-.busca a {
-    background-color: #3084B4;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 24px;
-}
-
-.busca :hover{
-    background-color: #074A71;
-}

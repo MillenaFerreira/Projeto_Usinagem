@@ -4,14 +4,15 @@ class header extends HTMLElement {
     constructor() {
         super()
         this.shadow = this.attachShadow({ mode: 'open' })
-        this.imagem_logo = './img/logo.png'
+        this.imagem_logo = '../img/logo.png'
         this.text_button = 'Login'
         this.color_button = 'black'
+        this.link_button = '#'
         this.color_top = 'black'
     }
 
     static get observedAttributes() {
-        return ['imagem_logo', 'text_button', 'color_button', 'color_top' ]
+        return ['imagem_logo', 'text_button', 'color_button', 'link_button', 'color_top' ]
     }
 
     attributeChangedCallback(nameAttr, oldValue, newValue) {
@@ -31,6 +32,10 @@ class header extends HTMLElement {
         padding: 0;
         margin: 0;
         box-sizing: border-box;
+    }
+    a{
+        text-decoration: none;
+        color: inherit;
     }
 
     .topo {
@@ -56,6 +61,9 @@ class header extends HTMLElement {
     }
     
     .login {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 175px;
         height: 49px;
         border: 0;
@@ -105,10 +113,11 @@ class header extends HTMLElement {
         img.classList.add('logo')
         img.src = this.imagem_logo
 
-        const login = document.createElement('button')
+        const login = document.createElement('a')
         login.classList.add('login')
         login.textContent = this.text_button
         login.style.backgroundColor = this.color_button
+        login.href = this.link_button
 
         container.append(topo, informacao)
         informacao.append(img, login)

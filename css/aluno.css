@@ -1,0 +1,228 @@
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 75px 1fr;
+}
+
+nav {
+    background-color: #3084B4;
+}
+
+.busca {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    background-color: aqua;
+}
+
+.busca a {
+    background-color: #3084B4;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.busca :hover {
+    background-color: #074A71;
+}
+
+#root {
+    height: 100%;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    padding: 48px 80px;
+}
+
+.container-materia {
+    background-color: #ff0000e0;
+}
+
+.container-areaAluno {
+    background-color: #eeee;
+    display: flex;
+    flex-direction: column;
+    gap: 69px;
+}
+
+.container-horario {
+    background-color: #eeee;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-relatorio {
+    background-color: #1100ffe0;
+}
+
+/* AREA DO ALUNO */
+.container_topo {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 33px;
+    line-height: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.container_topo p {
+    color: #074A71;
+}
+
+.linha {
+    background-color: #3084B4;
+    width: 100%;
+    height: 2px;
+}
+
+.cards_turma {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+    grid-gap: 46px;
+}
+
+.card {
+    width: 300px;
+    height: 260px;
+    background: #D9D9D9;
+    border: 1px solid #3084B4;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    cursor: pointer;
+}
+
+.card img {
+    width: 120px;
+    height: 116px;
+}
+
+.card p {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 33px;
+    line-height: 40px;
+}
+
+.card :hover {
+    transform: scale(2);
+}
+
+/* HORARIO */
+
+.nome_buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.adicionar_editar_deletar button {
+    color: white;
+    background-color: #3084B4;
+    padding: 10px;
+    border-radius: 50%;
+    border: 0;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.horarios {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: rgba(0, 0, 0, 0.5);
+    padding-top: 67px;
+    border-bottom: 2px solid rgba(48, 132, 180, 0.5);
+}
+.dados{
+    display: flex;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: rgba(0, 0, 0, 0.5);
+    padding: 20px 10px;
+    border-bottom: 2px solid rgba(48, 132, 180, 0.5);
+}
+.data{
+    padding-left: 5px;
+}
+.inicio{
+    padding-left: 15vw;
+}
+.termino{
+    padding-left: 15.5vw;
+}
+.desconto{
+    padding-left: 16.5vw;
+}
+.liquido{
+    padding-left: 16vw;
+}
+.total_geral{
+    padding-left: 15vw;
+}
+
+/* TESTE */
+input::-webkit-inner-spin-button,
+input::-webkit-clear-button {
+  display: none;
+}
+
+input::-webkit-calendar-picker-indicator {
+  color: rgba(0, 0, 0, 0);
+  opacity: 1
+}
+
+input::-webkit-calendar-picker-indicator:hover {
+  background: transparent;
+  cursor: pointer;
+}
+
+input::-webkit-calendar-picker-indicator::after {
+  content: '';
+  display: block;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -16px;
+}
+
+.date {
+  position: relative;
+  width: 154px;
+  overflow: auto;
+  margin: 30px auto;
+  background: #000;
+}
+input {
+  width: 140px;
+  padding: 5px;
+  height: 24px;
+  display: block;
+}
