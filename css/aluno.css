@@ -28,8 +28,9 @@ nav {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    text-align: center;
 }
 
 .busca :hover {
@@ -43,7 +44,7 @@ nav {
 .container {
     width: 100%;
     height: 100%;
-    padding: 48px 80px;
+    padding: 5vw 8.4vh;
 }
 
 .container-materia {
@@ -54,7 +55,7 @@ nav {
     background-color: #eeee;
     display: flex;
     flex-direction: column;
-    gap: 69px;
+    gap: 7.2vh;
 }
 
 .container-horario {
@@ -72,11 +73,11 @@ nav {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
-    font-size: 33px;
-    line-height: 40px;
+    font-size: 2rem;
+    line-height: 2.5rem;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 2vh;
 }
 
 .container_topo p {
@@ -97,8 +98,8 @@ nav {
 }
 
 .card {
-    width: 300px;
-    height: 260px;
+    width: 400px;
+    height: 350px;
     background: #D9D9D9;
     border: 1px solid #3084B4;
     border-radius: 5px;
@@ -111,21 +112,32 @@ nav {
 }
 
 .card img {
-    width: 120px;
-    height: 116px;
+    width: 55%;
+    height: 60%;
 }
 
 .card p {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
-    font-size: 33px;
-    line-height: 40px;
+    font-size: 2rem;
+    line-height: 2.5rem;
 }
 
-.card :hover {
-    transform: scale(2);
+@media (max-width: 999px) {
+    .busca {
+        width: 100%;
+        display: none;
+    }
+    .cards_turma {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
+@media (max-width: 640px) {
+
+}
+
+
 
 /* HORARIO */
 
@@ -156,7 +168,8 @@ nav {
     padding-top: 67px;
     border-bottom: 2px solid rgba(48, 132, 180, 0.5);
 }
-.dados{
+
+.dados {
     display: flex;
     font-family: 'Montserrat';
     font-style: normal;
@@ -167,62 +180,69 @@ nav {
     padding: 20px 10px;
     border-bottom: 2px solid rgba(48, 132, 180, 0.5);
 }
-.data{
+
+.data {
     padding-left: 5px;
 }
-.inicio{
+
+.inicio {
     padding-left: 15vw;
 }
-.termino{
+
+.termino {
     padding-left: 15.5vw;
 }
-.desconto{
+
+.desconto {
     padding-left: 16.5vw;
 }
-.liquido{
+
+.liquido {
     padding-left: 16vw;
 }
-.total_geral{
+
+.total_geral {
     padding-left: 15vw;
 }
 
 /* TESTE */
 input::-webkit-inner-spin-button,
 input::-webkit-clear-button {
-  display: none;
+    display: none;
 }
 
 input::-webkit-calendar-picker-indicator {
-  color: rgba(0, 0, 0, 0);
-  opacity: 1
+    color: rgba(0, 0, 0, 0);
+    opacity: 1
 }
 
 input::-webkit-calendar-picker-indicator:hover {
-  background: transparent;
-  cursor: pointer;
+    background: transparent;
+    cursor: pointer;
 }
 
 input::-webkit-calendar-picker-indicator::after {
-  content: '';
-  display: block;
-  width: 32px;
-  height: 32px;
-  position: absolute;
-  top: 50%;
-  right: 0;
-  margin-top: -16px;
+    content: '';
+    display: block;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: -16px;
 }
 
 .date {
-  position: relative;
-  width: 154px;
-  overflow: auto;
-  margin: 30px auto;
-  background: #000;
+    position: relative;
+    width: 154px;
+    overflow: auto;
+    margin: 30px auto;
+    background: #000;
 }
+
 input {
-  width: 140px;
-  padding: 5px;
-  height: 24px;
-  display: block;
+    width: 140px;
+    padding: 5px;
+    height: 24px;
+    display: block;
 }
