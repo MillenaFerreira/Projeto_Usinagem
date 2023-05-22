@@ -48,7 +48,7 @@ nav {
 }
 
 .container-materia {
-    background-color: #ff0000e0;
+    background-color: #eeee;
 }
 
 .container-areaAluno {
@@ -65,7 +65,7 @@ nav {
 }
 
 .container-relatorio {
-    background-color: #1100ffe0;
+    background-color: #eeee;
 }
 
 /* AREA DO ALUNO */
@@ -125,24 +125,33 @@ nav {
 }
 
 @media (max-width: 999px) {
+
+    /* AREA DO ALUNO */
     .busca {
         width: 100%;
     }
+
     .cards_turma {
         grid-template-columns: repeat(1, 1fr);
     }
 }
+
 @media (max-width: 640px) {
-    .busca a{
+
+    /* AREA DO ALUNO */
+    .busca a {
         font-size: 1rem;
     }
-    .container_topo{
+
+    .container_topo {
         text-align: center;
     }
+
     .container {
         padding: 5vw 20px;
     }
-    .card{
+
+    .card {
         width: 270px;
         height: 270px;
     }
