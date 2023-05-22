@@ -3,6 +3,8 @@
 // import { carregarCardDescription } from "./description.js"
 // import { carregarCardVarinha } from "./varinha.js"
 
+import {btn} from'./horario.js'
+
 const routes = {
     '/materia' : {
                         html : '/pages/materia.html',
@@ -31,6 +33,7 @@ const route = async() => {
 
     //pegando o valor do href que é passado lá no index
     const path = window.location.pathname
+    console.log(window.location.pathname);
 
     //pega a posição path que são alguma das paginas
     const response = await fetch(routes[path].html)
@@ -39,8 +42,16 @@ const route = async() => {
 
     document.getElementById('root').innerHTML = html
 
-    routes[path].js()
+   // routes[path].js()
+
+    if(window.location.pathname == '/horario'){
+        console.log('chegou no horario');
+        btn()
+    }else{
+        console.log('nnnn');
+    }
 
 }
 
 window.route = route
+
