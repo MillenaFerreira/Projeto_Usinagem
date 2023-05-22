@@ -208,19 +208,19 @@ nav {
 }
 
 .inicio {
-    padding-left: 15vw;
+    padding-left: 10vw;
 }
 
 .termino {
-    padding-left: 15.5vw;
+    padding-left: 11vw;
 }
 
 .desconto {
-    padding-left: 16.5vw;
+    padding-left: 13vw;
 }
 
 .liquido {
-    padding-left: 16vw;
+    padding-left: 12vw;
 }
 
 .total_geral {
@@ -231,10 +231,15 @@ nav {
     visibility: hidden;
 }
 
+.time_input{
+    visibility: hidden;
+}
 
 
 #label_calendar{
     z-index: 1;
+}
+label{
     cursor: pointer;
 }
 
