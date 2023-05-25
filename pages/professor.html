@@ -7,23 +7,22 @@
     rel="stylesheet">
 <link rel="shortcut icon" href="../img/icon.png" type="image/x-icon">
 
-<title>ALUNO</title>
+<title>PROFESSOR</title>
 
 <!-- Link do FontAwesome -->
 <script src="https://kit.fontawesome.com/30058942d9.js" crossorigin="anonymous"></script>
 
 <!-- CSS -->
 <link rel="stylesheet" href="../css/reset.css">
-<link rel="stylesheet" href="../css/aluno.css">
+<link rel="stylesheet" href="../css/professor.css">
 
 
 <!-- COMPONENTS -->
 <script src="../components/header.js" defer type="module"></script>
 
-<!-- <script src="../js/materia.js" defer type="module"></script>
-<script src="../js/areaAluno.js" defer type="module"></script>
-<script src="../js/relatorio.js" defer type="module"></script> -->
-<script src="../js/horario.js" defer type="module"></script>
+<!-- <script src="../js/cursos.js" defer type="module"></script>
+<script src="../js/turmas.js" defer type="module"></script>
+<script src="../js/alunos.js" defer type="module"></script> -->
 <script src="../js/app.js" defer type="module"></script>
 
 <body>
@@ -31,21 +30,18 @@
     <header-padrao color_top="#3084B4" color_button="#DA251C" text_button="VOLTAR" link_button="../index.html"></header-padrao>
     <nav>
         <ul class="busca">
-            <a href="/materia" onclick="route()" class="materia">
-                Matéria
+            <a href="/cursos" onclick="route_professor()" class="cursos">
+                Cursos
             </a>
-            <a href="/areaAluno" onclick="route()" class="areaAluno">
-                Área do Aluno
+            <a href="/turmas" onclick="route_professor()" class="turmas">
+                Turmas
             </a>
-            <a href="/horario" onclick="route()" class="horario">
-                Horário
-            </a>
-            <a href="/relatorio" onclick="route()" class="relatorio">
-                Relatório
+            <a href="/alunos" onclick="route_professor()" class="alunos">
+                Alunos
             </a>
         </ul>
     </nav>
-    <main id="root_aluno">
+    <main id="root_professor">
 
     </main>
 </body>

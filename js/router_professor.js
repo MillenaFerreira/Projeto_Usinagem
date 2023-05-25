@@ -3,28 +3,22 @@
 // import { carregarCardDescription } from "./description.js"
 // import { carregarCardVarinha } from "./varinha.js"
 
-import {btn} from'./horario.js'
-
 const routes = {
-    '/materia' : {
-                        html : '/pages/materia.html',
+    '/cursos' : {
+                        html : '/pages/cursos.html',
                         // js : carregarCardMateria
     },
-    '/areaAluno'     : {
-                        html : '/pages/areaAluno.html',
+    '/turmas'     : {
+                        html : '/pages/turmas.html',
                         // js : carregarCardAreaAluno
     },
-    '/horario'     : {
-                        html : '/pages/horario.html',
+    '/alunos'     : {
+                        html : '/pages/alunos.html',
                         // js : carregarCardHorario
-    },
-    '/relatorio'     : {
-                        html : '/pages/relatorio.html',
-                        // js : carregarCardRelatorio
     }
 }
 
-const route = async() => {
+const route_professor = async() => {
     // não permite passar para outra página
     window.event.preventDefault()
 
@@ -40,18 +34,9 @@ const route = async() => {
     
     const html = await response.text()
 
-    document.getElementById('root_aluno').innerHTML = html
+    document.getElementById('root_professor').innerHTML = html
 
-   // routes[path].js()
-
-    if(window.location.pathname == '/horario'){
-        console.log('chegou no horario');
-        btn()
-    }else{
-        console.log('nnnn');
-    }
-
+    routes[path].js()
 }
 
-window.route = route
-
+window.route_professor = route_professor
