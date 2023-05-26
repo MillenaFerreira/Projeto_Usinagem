@@ -1,12 +1,12 @@
 'use strict'
 
-// import { carregarCardDescription } from "./description.js"
+ import { carregarCardCursos } from "./cursos.js"
 // import { carregarCardVarinha } from "./varinha.js"
 
 const routes = {
     '/cursos' : {
                         html : '/pages/cursos.html',
-                        // js : carregarCardMateria
+                        js : carregarCardCursos
     },
     '/turmas'     : {
                         html : '/pages/turmas.html',

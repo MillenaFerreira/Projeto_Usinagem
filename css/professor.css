@@ -118,6 +118,10 @@ nav {
     box-shadow: 8px 8px 5px 2px rgba(0, 0, 0, 0.25);
     cursor: pointer;
 }
+.card_curso img {
+    width: 100px;
+    height: 100px;
+}
 
 .nome {
     text-align: center;
