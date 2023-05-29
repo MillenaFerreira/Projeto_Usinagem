@@ -1,6 +1,7 @@
 'use strict'
 
  import { carregarCardCursos } from "./cursos.js"
+ import { createCardCurso } from "./modal_cursos.js"
 // import { carregarCardVarinha } from "./varinha.js"
 
 const routes = {
@@ -37,6 +38,10 @@ const route_professor = async() => {
     document.getElementById('root_professor').innerHTML = html
 
     routes[path].js()
+
+    if(window.location.pathname == '/cursos'){
+        createCardCurso()
+    }
 }
 
 window.route_professor = route_professor

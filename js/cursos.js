@@ -40,6 +40,11 @@ const criarCard = (curso) => {
     const hora_curso = document.createElement('div')
     hora_curso.textContent = `${curso.carga_horaria}h`
 
+    card.addEventListener('click', function(){
+        localStorage.setItem('id', curso.id)
+        console.log(curso.id);
+    })
+
     card.append(imagem, nome, carga_horaria)
     nome.append(nomeSigla, nomeCompleto)
     carga_horaria.append(icone, hora_curso)
