@@ -68,7 +68,7 @@ nav {
     justify-content: space-between;
 }
 
-.adicionar_editar_deletar button {
+.adicionar_editar_deletar a {
     color: white;
     background-color: #3084B4;
     padding: 10px;
@@ -96,6 +96,72 @@ nav {
     height: 2px;
 }
 
+.pre__recarga{
+    width: 100px;
+    height: 100px;
+}
+
+/* MODEL ADICIONAR */
+.modal {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(77, 77, 77, .7);
+    transition: all .4s;
+}
+
+.modal:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal__content {
+    font-family: 'Montserrat';
+    border-radius: 4px;
+    position: relative;
+    width: 500px;
+    max-width: 90%;
+    background: #fff;
+    padding: 1em 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.modal__footer {
+    text-align: right;
+}
+
+.modal__close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #585858;
+    text-decoration: none;
+}
+
+.input__file{
+    font-size: 1rem;
+}
+.input__nome {
+    font-size: 1rem;
+}
+
+.input__sigla {
+    font-size: 1rem;
+}
+
+.input__carga--horaria {
+    font-size: 1rem;
+}
+
 /* CURSOS */
 .cards_cursos {
     display: grid;
@@ -118,6 +184,7 @@ nav {
     box-shadow: 8px 8px 5px 2px rgba(0, 0, 0, 0.25);
     cursor: pointer;
 }
+
 .card_curso img {
     width: 100px;
     height: 100px;

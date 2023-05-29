@@ -29,4 +29,4 @@ const curso = {
     "foto": "https://i.pinimg.com/736x/79/30/58/793058e922d0754753e0ccd33265a5cd.jpg"
 };
 
-console.log(createCurso(curso));
+//console.log(createCurso(curso));

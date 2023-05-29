@@ -4,52 +4,12 @@ import { getTodosCursos } from "../js/api/professor_curso.js"
 
 const cursos = await getTodosCursos()
 
-console.log(cursos.cursos);
+//console.log(cursos.cursos);
 
-const criarTopo = () => {
-    const containerTopo = document.createElement('span')
-    containerTopo.classList.add('container_topo')
-
-    const linha = document.createElement('div')
-    linha.classList.add('linha')
-
-    //dentro do containerTop
-    const nome_button = document.createElement('div')
-    nome_button.classList.add('nome_buttons')
-
-    //dentro do nome_button terá: 
-    const nome = document.createElement('p')
-    nome.textContent = 'Cursos'
-
-    const add_update_delete = document.createElement('div')
-    add_update_delete.classList.add('adicionar_editar_deletar')
-
-    //dentro do add_update_delete terá:
-    const icon_add = document.createElement('button')
-    icon_add.classList.add('fas')
-    icon_add.classList.add('fa-plus')
-
-    const icon_edit = document.createElement('button')
-    icon_edit.classList.add('far')
-    icon_edit.classList.add('fa-edit')
-
-    const icon_delete = document.createElement('button')
-    icon_delete.classList.add('fas')
-    icon_delete.classList.add('fa-trash')
-
-    
-
-    containerTopo.append(nome_button, linha)
-    nome_button.append(nome, add_update_delete)
-    add_update_delete.append(icon_add, icon_edit, icon_delete)
-
-    console.log('teste');
-    return containerTopo
-}
 
 const criarCard = (curso) => {
 
-    console.log('entrei no criar card');
+    //console.log('entrei no criar card');
 
     const card = document.createElement('div')
     card.classList.add('card_curso')
@@ -92,18 +52,9 @@ const criarCard = (curso) => {
 export const carregarCardCursos = () => {
     const cards = document.querySelector('.cards_cursos')
     const cardsJSON = cursos.cursos.map(criarCard)
-    console.log(cards);
+    //console.log(cards);
 
     cards.replaceChildren(...cardsJSON)
 }
-
-// export const carregarTopo = () => {
-//     const cards = document.querySelector('.container-cursos')
-//     const cardsJSON = cursos.cursos.map(criarTopo)
-//     console.log(cards);
-
-//     cards.replaceChildren(...cardsJSON)
-// }
-// criarTopo()
 
 //carregarCard()

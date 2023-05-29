@@ -27,7 +27,7 @@ const route_professor = async() => {
 
     //pegando o valor do href que é passado lá no index
     const path = window.location.pathname
-    console.log(window.location.pathname);
+    //console.log(window.location.pathname);
 
     //pega a posição path que são alguma das paginas
     const response = await fetch(routes[path].html)

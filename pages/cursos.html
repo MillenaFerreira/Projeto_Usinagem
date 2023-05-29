@@ -1,16 +1,44 @@
+<script src="../js/modal_cursos.js" defer type="module"></script>
+
 <div class="container container-cursos" id="container-cursos">
     <div class="container_topo">
         <div class="nome_buttons">
             <p>Cursos</p>
             <div class="adicionar_editar_deletar">
-                <button class="fas fa-plus"></button>
-                <button class="far fa-edit"></button>
-                <button class="fas fa-trash"></button>
+                <a class="fas fa-plus" href="#modal_adicionar"></a>
+                <a class="far fa-edit"></a>
+                <a class="fas fa-trash"></a>
             </div>
         </div>
         <div class="linha"></div>
+
+        <div id="modal_adicionar" class="modal">
+            <div class="modal__content">
+                <p>Adicionar um Curso</p>
+                <div class='input__file'>
+                    <label for="">URL da Imagem do Curso:</label>
+                    <input type="text" name="url" id="myInputUrl" maxlength="150" style="width: 100%;">
+                </div>
+                <div class="input__nome">
+                    <label for="">Nome do Curso:</label>
+                    <input type="text" name="nome" id="myInputNome" maxlength="100" style="width: 63%;">
+                </div>
+                <div class="input__sigla">
+                    <label for="">Sigla do Curso:</label>
+                    <input type="text" name="sigla" id="myInputSigla" maxlength="5" style="width: 66%;">
+                </div>
+                <div class="input__carga--horaria">
+                    <label for="">Carga Horaria do Curso:</label>
+                    <input type="number" name="carga_horaria" id="myInputCargaHoraria" min="0" max="50000" style="width: 47%;">
+                </div>
+                <div class="modal__footer">
+                    <button type="submit" id="salvarBtn">Salvar</button>
+                </div>
+                <a href="#" class="modal__close">&times;</a>
+            </div>
+        </div>
     </div>
     <div class="cards_cursos">
-        
+
     </div>
 </div>
