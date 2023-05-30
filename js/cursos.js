@@ -15,9 +15,29 @@ const criarCard = (curso) => {
     card.classList.add('card_curso')
     
     //dentro do card_curso terá:
+    const segura_tudo = document.createElement('div')
+    segura_tudo.classList.add('segura_tudo')
+
+    const editar_excluir = document.createElement('div')
+    editar_excluir.classList.add('editar_excluir')
+
+    //dentro do editar_excluir terá:
+    const editar = document.createElement('div')
+    editar.classList.add('far')
+    editar.classList.add('fa-edit')
+
+    const excluir = document.createElement('div')
+    excluir.classList.add('fas')
+    excluir.classList.add('fa-trash')
+
+    //dentro do segura_tudo terá:
     const imagem = document.createElement('img')
     imagem.src = curso.foto
 
+    const nome_carga = document.createElement('div')
+    nome_carga.classList.add('nome_carga')
+
+    //dentro do nome_carga terá:
     const nome = document.createElement('div')
     nome.classList.add('nome')
 
@@ -45,7 +65,10 @@ const criarCard = (curso) => {
         console.log(curso.id);
     })
 
-    card.append(imagem, nome, carga_horaria)
+    card.append(segura_tudo, editar_excluir)
+    editar_excluir.append(editar, excluir)
+    segura_tudo.append(imagem, nome_carga)
+    nome_carga.append(nome, carga_horaria)
     nome.append(nomeSigla, nomeCompleto)
     carga_horaria.append(icone, hora_curso)
 
