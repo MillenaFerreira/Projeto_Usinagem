@@ -1,6 +1,11 @@
 'use strict'
 
-import { createCurso } from "../js/api/professor_curso.js";
+import { createCurso, deleteCurso} from "../js/api/professor_curso.js";
+
+
+const idCurso = localStorage.getItem('id')
+console.log(idCurso);
+
 
 export const createCardCurso = () => {
 
@@ -10,7 +15,7 @@ export const createCardCurso = () => {
         const cargaHorariaInput = document.getElementById("myInputCargaHoraria");
         const urlInput = document.getElementById("myInputUrl");
         const descricaoInput = document.getElementById("myInputDescricao");
-        const form = document.getElementById("modal__content");
+        const form = document.getElementById("modal__adicionar--content");
 
         if (form.checkValidity()) {
             const nome = nomeInput.value;
@@ -26,7 +31,7 @@ export const createCardCurso = () => {
                 "sigla": `${sigla}`,
                 "foto": `${url}`
             };
-            
+
             console.log(curso);
 
             createCurso(curso)
@@ -39,4 +44,12 @@ export const createCardCurso = () => {
 
     })
 
+}
+export const deleteCardCurso = () => {
+    //chamando o botão que vai deletar
+    const deletarCardCurso = document.getElementById("Deletar");
+    deletarCardCurso.addEventListener('click', () => {
+        deleteCurso(idCurso)
+        //console.log('aaa');
+    })
 }

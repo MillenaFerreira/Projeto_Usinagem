@@ -6,14 +6,12 @@
             <p>Cursos</p>
             <div class="adicionar_editar_deletar">
                 <a class="fas fa-plus" href="#modal_adicionar"></a>
-                <a class="far fa-edit"></a>
-                <a class="fas fa-trash"></a>
             </div>
         </div>
         <div class="linha"></div>
 
-        <div id="modal_adicionar" class="modal">
-            <form class="modal__content" id="modal__content">
+        <div id="modal_adicionar" class="modal_adicionar">
+            <form class="modal__adicionar--content" id="modal__adicionar--content">
                 <p>Adicionar um Curso</p>
                 <div class='input__file'>
                     <label for="">URL da Imagem do Curso:</label>
@@ -35,14 +33,14 @@
                     <label for="">Carga Horaria do Curso:</label>
                     <input type="number" name="carga_horaria" id="myInputCargaHoraria" min="0" style="width: 100%;" required>
                 </div>
-                <div class="modal__footer">
+                <div class="modal__adicionar--footer">
                     <a type="submit" id="salvarBtn">Salvar</a>
                 </div>
-                <a href="#" class="modal__close">&times;</a>
+                <a href="#" class="modal__adicionar--close">&times;</a>
             </form>
         </div>
         
-        <!-- <div class="error" id="error__modal">
+        <!-- <div class="modal__error" id="modal__error">
             <div class="modal__error--content " id="error">
                 <p>Salvo com Sucesso</p>
                 <div class="modal__error--footer">
@@ -51,6 +49,18 @@
                 <a href="#" class="modal__error--close">&times;</a>
             </div>
         </div> -->
+
+        <div class="modal__deletar" id="modal__deletar">
+            <div class="modal__deletar--content" id="modal__deletar--content">
+                <p>Deseja mesmo Deletar?</p>
+                <div class="modal__deletar--footer">
+                    <a type="submit" id="naoDeletar" href="#">Não</a>
+                    <a type="submit" id="Deletar" href="#">Sim</a>
+                </div> 
+                <a href="#" class="modal__deletar--close" id="sair">&times;</a>
+            </div>
+        </div>
+        
     </div>
     <div class="cards_cursos">
 

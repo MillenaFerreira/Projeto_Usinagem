@@ -21,12 +21,13 @@ export const createCurso = async (aluno) => {
     fetch(url, options)
 }
 
-const curso = {
-    "nome": "Sheldon",
-    "carga_horaria": "120000",
-    "descricao": "misto quente",
-    "sigla": "SHELD",
-    "foto": "https://i.pinimg.com/736x/79/30/58/793058e922d0754753e0ccd33265a5cd.jpg"
-};
+export const deleteCurso = async (idAluno) => {
+  const url = `http://localhost:8080/v1/projeto-usinagem/curso/${idAluno}`;
+  const options = {
+    method: 'DELETE'
+  };
 
-//console.log(createCurso(curso));
+  fetch(url, options )
+}
+
+//deleteAluno( 5 );

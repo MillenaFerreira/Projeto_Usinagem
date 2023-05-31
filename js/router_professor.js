@@ -1,7 +1,7 @@
 'use strict'
 
  import { carregarCardCursos } from "./cursos.js"
- import { createCardCurso } from "./modal_cursos.js"
+ import { createCardCurso, deleteCardCurso } from "./modal_cursos.js"
 // import { carregarCardVarinha } from "./varinha.js"
 
 const routes = {
@@ -41,6 +41,7 @@ const route_professor = async() => {
 
     if(window.location.pathname == '/cursos'){
         createCardCurso()
+        deleteCardCurso()
     }
 }
 

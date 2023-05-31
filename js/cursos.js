@@ -1,8 +1,10 @@
 'use strict'
 
-import { getTodosCursos } from "../js/api/professor_curso.js"
+import { getTodosCursos, deleteCurso } from "../js/api/professor_curso.js"
 
 const cursos = await getTodosCursos()
+
+//const deletar = await deleteCurso()
 
 //console.log(cursos.cursos);
 
@@ -13,7 +15,7 @@ const criarCard = (curso) => {
 
     const card = document.createElement('div')
     card.classList.add('card_curso')
-    
+
     //dentro do card_curso terá:
     const segura_tudo = document.createElement('div')
     segura_tudo.classList.add('segura_tudo')
@@ -22,13 +24,18 @@ const criarCard = (curso) => {
     editar_excluir.classList.add('editar_excluir')
 
     //dentro do editar_excluir terá:
-    const editar = document.createElement('div')
+    const editar = document.createElement('a')
     editar.classList.add('far')
     editar.classList.add('fa-edit')
 
-    const excluir = document.createElement('div')
+    const excluir = document.createElement('a')
     excluir.classList.add('fas')
     excluir.classList.add('fa-trash')
+    excluir.href = "#modal__deletar"
+    excluir.addEventListener('click', function () {
+        localStorage.setItem('id', curso.id)
+        console.log(curso.id);
+    })
 
     //dentro do segura_tudo terá:
     const imagem = document.createElement('img')
@@ -60,10 +67,6 @@ const criarCard = (curso) => {
     const hora_curso = document.createElement('div')
     hora_curso.textContent = `${curso.carga_horaria}h`
 
-    card.addEventListener('click', function(){
-        localStorage.setItem('id', curso.id)
-        console.log(curso.id);
-    })
 
     card.append(segura_tudo, editar_excluir)
     editar_excluir.append(editar, excluir)
