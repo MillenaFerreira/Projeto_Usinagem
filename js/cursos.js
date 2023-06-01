@@ -27,6 +27,18 @@ const criarCard = (curso) => {
     const editar = document.createElement('a')
     editar.classList.add('far')
     editar.classList.add('fa-edit')
+    editar.href = "#modal__editar"
+    editar.addEventListener('click', function () {
+        localStorage.setItem('id_update', curso.id)
+        console.log(curso.id);
+
+        document.getElementById("myInputNomeValor").value = curso.nome;
+        document.getElementById("myInputCargaHorariaValor").value = curso.carga_horaria;
+        document.getElementById("myInputDescricaoValor").value = curso.descricao;
+        document.getElementById("myInputSiglaValor").value = curso.sigla;
+        document.getElementById("myInputUrlValor").value = curso.foto;
+        
+    })
 
     const excluir = document.createElement('a')
     excluir.classList.add('fas')
