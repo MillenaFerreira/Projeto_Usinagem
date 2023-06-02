@@ -1,6 +1,7 @@
 'use strict'
 
  import { carregarCardCursos } from "./cursos.js"
+ import { carregarCardTurmas } from "./turmas.js"
  import { createCardCurso, deleteCardCurso, updateCardCurso } from "./modal_cursos.js"
 // import { carregarCardVarinha } from "./varinha.js"
 
@@ -11,7 +12,7 @@ const routes = {
     },
     '/turmas'     : {
                         html : '/pages/turmas.html',
-                        // js : carregarCardAreaAluno
+                        js : carregarCardTurmas
     },
     '/alunos'     : {
                         html : '/pages/alunos.html',

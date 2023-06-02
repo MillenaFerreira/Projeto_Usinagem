@@ -137,7 +137,8 @@ nav {
 .modal__adicionar--footer {
     text-align: right;
 }
-#salvarBtn{
+
+#salvarBtn {
     font-size: 1.3rem;
     padding: 10px;
     background-color: #3084B4;
@@ -207,6 +208,7 @@ nav {
     flex-direction: column;
     gap: 10px;
 }
+
 .modal__error--content p {
     text-align: center;
 }
@@ -268,7 +270,7 @@ nav {
     text-decoration: none;
 }
 
-#editar{
+#editar {
     font-size: 1.3rem;
     padding: 10px;
     background-color: #3084B4;
@@ -383,16 +385,19 @@ nav {
     width: 150px;
     height: 150px;
 }
-.card_curso:hover{
+
+.card_curso:hover {
     border: 4px solid #3084B4;
     transition: all .1s;
 }
-.segura_tudo{
+
+.segura_tudo {
     width: 100%;
     display: flex;
     justify-content: space-around;
 }
-.nome_carga{
+
+.nome_carga {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -400,14 +405,23 @@ nav {
     gap: 10px;
 }
 
-.editar_excluir{
+.editar_excluir_cursos {
     display: flex;
     justify-content: flex-end;
     width: 100%;
     gap: 20px;
     font-size: 2rem;
     color: #074A71;
-  }
+}
+
+.editar_excluir_turmas {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
+    font-size: 2rem;
+    color: #074A71;
+}
 
 .nome {
     text-align: center;
@@ -456,13 +470,30 @@ nav {
 }
 
 .card_turmas h1 {
-    font-size: 64px;
+    font-size: 54px;
     line-height: 78px;
 }
 
 .card_turmas span {
     font-size: 16px;
     line-height: 20px;
+}
+.data_inicio_termino{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.input__data--inicio{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 45%;
+}
+.input__data--termino{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 45%;
 }
 
 /* ALUNOS */

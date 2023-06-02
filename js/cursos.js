@@ -1,6 +1,6 @@
 'use strict'
 
-import { getTodosCursos, deleteCurso } from "../js/api/professor_curso.js"
+import { getTodosCursos } from "../js/api/professor_curso.js"
 
 const cursos = await getTodosCursos()
 
@@ -21,7 +21,7 @@ const criarCard = (curso) => {
     segura_tudo.classList.add('segura_tudo')
 
     const editar_excluir = document.createElement('div')
-    editar_excluir.classList.add('editar_excluir')
+    editar_excluir.classList.add('editar_excluir_cursos')
 
     //dentro do editar_excluir terá:
     const editar = document.createElement('a')
